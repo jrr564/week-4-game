@@ -1,0 +1,39 @@
+body, .panel {
+	background-color: black;
+	font-family: courier;
+	color: #98FB98;
+	margin: 15px;
+	font-size: 18px;
+}
+
+
+#hal {
+	width: 600px;
+}
+
+.btn {
+	background-color: black;
+	border: 2px solid #98FB98;
+    color: #98FB98;
+    transition: all .5s ease;
+}
+.btn:before {
+      background-color: black;
+      border: 2px transparent solid;
+      left: 50%;
+      top: 0px;
+      transform: translateX(-50%);
+      box-sizing: border-box;
+      width: 120px;
+      height: 50px;
+      transition: all .7s ease
+  }
+.btn:hover {
+    background-color: transparent;
+    border-radius: 20px;
+  }
+.btn:before {
+      background-color: black;
+      border-radius: 30px;
+      border: 1px #98FB98 solid;
+  }

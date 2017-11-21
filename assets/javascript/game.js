@@ -1,6 +1,6 @@
 $( document ).ready(function(){
 
-//global variable	
+//global variables	
 //generates random number
 	var numRand = Math.floor(Math.random()*101+19);
 //sets score to 0
@@ -16,7 +16,7 @@ $( document ).ready(function(){
 	var losses = 0;
 
 //displays random number
-	$(".goal").html("u gotta get this number: "+numRand);
+	$(".goal").html("To open the pod bay doors, match this number: "+numRand+"");
 //displays count score
     $(".counter").html("yr score: "+count);
 //displays wins
@@ -26,30 +26,29 @@ $( document ).ready(function(){
 //reset game
 	function gameReset() {
 		numRand = Math.floor(Math.random()*101+19);
-		$(".goal").html("u gotta get this number: "+numRand);
+		$(".goal").html("To open the pod bay doors, match this number: "+numRand+"");
 		attack1 = Math.floor(Math.random()*11+1);
 		attack2 = Math.floor(Math.random()*11+1);
 		attack3 = Math.floor(Math.random()*11+1);
 		attack4 = Math.floor(Math.random()*11+1);
 		count= 0;
-		$(".counter").html("yr score: "+count);
+		$(".counter").html("Score: "+count);
 		}
 //win screen
 	function win(){
-		$(".message").html("yr the man now, dog");
+		$(".message").html("Systems are normal. Opening pod bay doors..");
 		wins++;
 		$(".wins").html("Wins: "+wins);
 		gameReset();
 	}
 //loss screen
 	function loss(){
-		$(".message").html("u so disappointing");
+		$(".message").html("You have jeopardized the mission.");
 		losses++;
 		$(".losses").html("Losses: "+losses);
 		gameReset();
 	}
-//click functions
-//button one
+//buttons with click function
 	$("#button-one").on("click", function() {
 		count = count + attack1;
 		$(".counter").html("yr score: "+count);
