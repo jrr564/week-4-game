@@ -16,42 +16,42 @@ $( document ).ready(function(){
 	var losses = 0;
 
 //displays random number
-	$(".goal").html("To open the pod bay doors, match this number: "+numRand+"");
+	$(".goal").html("TO OPEN POD BAY DOORS, MATCH THIS NUMBER: "+numRand+"");
 //displays count score
-    $(".counter").html("yr score: "+count);
+    $(".counter").html("YOUR NUMBER: "+count);
 //displays wins
-	$(".wins").html("Wins: "+wins);
+	$(".wins").html("WINS: "+wins);
 	
-	$(".losses").html("Losses: "+losses);
+	$(".losses").html("LOSSES: "+losses);
 //reset game
 	function gameReset() {
 		numRand = Math.floor(Math.random()*101+19);
-		$(".goal").html("To open the pod bay doors, match this number: "+numRand+"");
+		$(".goal").html("TO OPEN POD BAY DOORS, MATCH THIS NUMBER: "+numRand+"");
 		attack1 = Math.floor(Math.random()*11+1);
 		attack2 = Math.floor(Math.random()*11+1);
 		attack3 = Math.floor(Math.random()*11+1);
 		attack4 = Math.floor(Math.random()*11+1);
 		count= 0;
-		$(".counter").html("Score: "+count);
+		$(".counter").html("YOUR NUMBER: "+count);
 		}
 //win screen
 	function win(){
-		$(".message").html("Systems are normal. Opening pod bay doors..");
+		$(".message").html("SYSTEMS ARE NORMAL. <br> OPENING DOORS. <br> PLAY AGAIN.");
 		wins++;
-		$(".wins").html("Wins: "+wins);
+		$(".wins").html("WINS: "+wins);
 		gameReset();
 	}
 //loss screen
 	function loss(){
-		$(".message").html("You have jeopardized the mission.");
+		$(".message").html('LIFE FUNCTIONS TERMINATED. <br>  TRY AGAIN.');
 		losses++;
-		$(".losses").html("Losses: "+losses);
+		$(".losses").html("LOSSES: "+losses);
 		gameReset();
 	}
 //buttons with click function
 	$("#button-one").on("click", function() {
 		count = count + attack1;
-		$(".counter").html("yr score: "+count);
+		$(".counter").html("YOUR NUMBER: "+count);
 		if (count === numRand) {
 			win();
 		}
@@ -62,7 +62,7 @@ $( document ).ready(function(){
 
 	$("#button-two").on("click", function() {
 		count = count + attack2;
-		$(".counter").html("yr score: "+count);
+		$(".counter").html("YOUR NUMBER: "+count);
 		if (count === numRand) {
 			win();
 		}
@@ -73,7 +73,7 @@ $( document ).ready(function(){
 
 	$("#button-three").on("click", function() {
 		count = count + attack3;
-		$(".counter").html("yr score: "+count);
+		$(".counter").html("YOUR NUMBER: "+count);
 		if (count === numRand) {
 			win();
 		}
@@ -84,7 +84,7 @@ $( document ).ready(function(){
 
 	$("#button-four").on("click", function() {
 		count = count + attack4;
-		$(".counter").html("yr score: "+count);
+		$(".counter").html("YOUR NUMBER: "+count);
 		if (count === numRand) {
 			win();
 		}

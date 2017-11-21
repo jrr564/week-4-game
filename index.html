@@ -8,13 +8,16 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+	<div class="page-header">
+  			<h1>HAL 9000 NUMBER GAME</h1>
+	</div>
 	<div class="col-md-6">
 		<img id="hal" src="assets/images/hal.jpg" alt="computer from 2001: Space Odyssey">
-		<div class="btn-group row" role="group" aria-label="...">
-		  <button id="button-one" type="button" class="btn btn-default">Earth </button>
-		  <button id="button-two" type="button" class="btn btn-default">Fire </button>
-		  <button id="button-three" type="button" class="btn btn-default">Water</button>
-		  <button id="button-four" type="button" class="btn btn-default">Heart</button>
+		<div id="buttons" class="btn-group row" role="group" aria-label="...">
+		  <button id="button-one" type="button" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> BUTTON</button>
+		  <button id="button-two" type="button" class="btn btn-default">  <span class="glyphicon glyphicon-plus-sign"></span> BUTTON </button>
+		  <button id="button-three" type="button" class="btn btn-default">  <span class="glyphicon glyphicon-plus-sign"></span> BUTTON </button>
+		  <button id="button-four" type="button" class="btn btn-default">  <span class="glyphicon glyphicon-plus-sign"></span> BUTTON </button>
 		</div>
 	</div>
 	<div id="container" class="col-md-6">
@@ -24,13 +27,14 @@
 		<div class="panel panel-default row">
 	  		<div class="counter panel-body"></div>
 		</div>
-		<div class="panel panel-default row">
-	  		<div class="wins panel-body col-md-3"></div>
-	  		<div class="losses panel-body"></div>
-		</div>
-		<div class="panel panel-default row">
+		<div id="box" class="panel panel-default row">
 	  		<p class="message"></p>
 		</div>
+		<div id="scoreboard" class="row">
+	  		<div class="wins panel panel-body col-md-4"></div>
+	  		<div class="losses panel panel-body col-md-4""></div>
+		</div>
+		
 	</div>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

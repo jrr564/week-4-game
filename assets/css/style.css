@@ -1,9 +1,39 @@
+h1 {
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	color: white;
+}
+
 body, .panel {
 	background-color: black;
 	font-family: courier;
 	color: #98FB98;
 	margin: 15px;
 	font-size: 18px;
+
+}
+
+.wins, .losses {
+	width: 250px;
+	margin: 25px 0 15px 25px;
+}
+
+#box {
+	height: 200px;
+	text-align: center;
+	color: red;
+	font-size: 36px;
+	padding: 30px;
+
+
+}
+
+.panel {
+	border: 1px #98FB98 solid;
 }
 
 
@@ -11,11 +41,18 @@ body, .panel {
 	width: 600px;
 }
 
+#buttons {
+	position: relative;
+	left: 80px;
+}
+
 .btn {
 	background-color: black;
 	border: 2px solid #98FB98;
     color: #98FB98;
     transition: all .5s ease;
+    font-size: 18px;
+
 }
 .btn:before {
       background-color: black;
@@ -27,13 +64,16 @@ body, .panel {
       width: 120px;
       height: 50px;
       transition: all .7s ease
+      font-size: 18px;
   }
 .btn:hover {
     background-color: transparent;
     border-radius: 20px;
+    font-size: 18px;
   }
 .btn:before {
       background-color: black;
       border-radius: 30px;
       border: 1px #98FB98 solid;
+      font-size: 18px;
   }
